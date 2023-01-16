@@ -65,16 +65,22 @@
             );
             ReactDOM.render(recipe, document.getElementById("root"));
             */
+            const items = [
+                "2 lb salmon",
+                "5 sprigs fresh rosemary",
+                "2 tablespoons olive oil",
+                "2 small lemons",
+                "1 teaspoon kosher salt",
+                "4 cloves of chopped garlic"
+            ];
+
             function IngredientsList() {
                 return React.createElement(
                     "ul",
                     {className: "ingredients"},
-                    React.createElement("li", null, "2 lb salmon"),         // ３番目以降は全部子要素
-                    React.createElement("li", null, "5 sprigs fresh rosemary"),
-                    React.createElement("li", null, "2 tablespoons olive oil"),
-                    React.createElement("li", null, "2 small lemons"),
-                    React.createElement("li", null, "1 teaspoon kosher salt"),
-                    React.createElement("li", null, "4 cloves of chopped garlic")
+                    items.map((ingredient, i) => 
+                        React.createElement("li", {key: i}, ingredient)
+                    )
                 );
             }
 
