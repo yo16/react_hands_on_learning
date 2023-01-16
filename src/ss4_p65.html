@@ -16,10 +16,12 @@
 
         <script>
             // ここにコードを記述する
-            let dish = React.createElement("h1", {id: "recipe-0"}, "Baked Salmon");
+            const dish = React.createElement("h1", {id: "recipe-0"}, "Baked Salmon");
             console.log(dish);
 
-            ReactDOM.render(dish, document.getElementById("root"));
+            const dessert = React.createElement("h2", null, "Coconut Cream Pie");
+
+            ReactDOM.render([dish, dessert], document.getElementById("root"));
         </script>
     </body>
 </html>
