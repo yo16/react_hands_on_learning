@@ -16,8 +16,10 @@
 
         <script>
             // ここにコードを記述する
-            let elm = React.createElement("h1", {id: "recipe-0"}, "Baked Salmon");
-            console.log(elm);
+            let dish = React.createElement("h1", {id: "recipe-0"}, "Baked Salmon");
+            console.log(dish);
+
+            ReactDOM.render(dish, document.getElementById("root"));
         </script>
     </body>
 </html>
