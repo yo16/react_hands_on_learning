@@ -3,7 +3,7 @@ import StarRating from './components/StarRating.js';
 
 function App() {
   return (
-    <StarRating />
+    <StarRating style={{ backgroundColor: "lightblue" }} />
   );
 }
 

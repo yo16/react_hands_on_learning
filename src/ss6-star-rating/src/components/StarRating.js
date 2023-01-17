@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Star from "./Star.js";
 
-export default function StarRating({ totalStars = 5 }) {
+export default function StarRating({ style = {}, totalStars = 5 }) {
     const [selectedStars, setSelectedStars] = useState(0);
     return (
-        <>
+        <div style={{ padding: "tpx", ...style }}>
             {[...Array(totalStars)].map((n, i) => (
                 <Star
                     key={i}
@@ -15,6 +15,6 @@ export default function StarRating({ totalStars = 5 }) {
             <p>
                 {selectedStars} of {totalStars} stars
             </p>
-        </>
+        </div>
     );
 }
