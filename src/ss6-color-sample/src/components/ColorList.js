@@ -1,10 +1,9 @@
 import Color from "./Color.js";
+import { useColors } from "../ColorProvider.js";
 
-export default function ColorList({
-    colors = [],
-    onRemoveColor = f => f,
-    onRateColor = f => f
-}) {
+export default function ColorList() {
+    const { colors } = useColors();
+
     if (!colors.length) return <div>No Colors Listed. (Add a Color)</div>;
 
     return (
@@ -14,8 +13,6 @@ export default function ColorList({
                     <Color
                         key={color.id}
                         {...color}
-                        onRemove={onRemoveColor}
-                        onRate={onRateColor}
                     />
                 ))
             }
